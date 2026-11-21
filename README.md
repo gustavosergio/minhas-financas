@@ -34,3 +34,11 @@ A carteira é independente do fluxo de caixa para evitar movimentações implíc
 ## Publicação estática
 
 A pasta `dist/` gerada por `npm run build` pode ser hospedada em um servidor estático, com o diretório raiz apontando para ela. Use HTTPS. Não publique backups. Uma futura sincronização requer autenticação e armazenamento por usuário antes de colocar dados pessoais em um servidor.
+
+## GitHub Pages
+
+Site: https://gustavosergio.github.io/minhas-financas/
+
+A publicação é automática a cada push em `main`, pelo workflow `pages.yml`, que executa testes, compila e publica `dist/`. A variável `GITHUB_PAGES=true` ajusta o caminho dos arquivos para `/minhas-financas/`; o desenvolvimento local continua usando `/`.
+
+Os registros locais não migram automaticamente de localhost para o endereço público. Para transferi-los, exporte o backup no endereço antigo e importe-o nas configurações do site publicado. O código do site é público; os registros financeiros permanecem no navegador de cada usuário.
